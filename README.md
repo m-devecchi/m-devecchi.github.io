@@ -5,7 +5,7 @@ Personal CV website of Marco De Vecchi, published with GitHub Pages.
 - `index.html` — the single-page CV
 - `styles.css` — styling built on the "Marco DeVecchi" design system tokens (colours, Inter type scale, 4px spacing, radii); light and dark themes, print stylesheet
 - `fonts/` — self-hosted Inter (latin subset, SIL OFL)
-- `Marco_De_Vecchi_CV.pdf` — the downloadable CV, one A4 page
+- `Marco_De_Vecchi_CV.pdf` — the downloadable CV, two A4 pages
 
 No build step: push to the default branch and GitHub Pages serves the site.
 
