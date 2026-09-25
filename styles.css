@@ -243,6 +243,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-variant-numeric: tabular-nums;
 }
 .exp-current .exp-period { color: var(--forest); font-weight: 500; }
+.exp-summary { margin-top: var(--space-2); }
+.exp-hl { margin: var(--space-2) 0 0; padding-left: var(--space-4); list-style: disc; font-size: 14px; line-height: 20px; }
+.exp-hl li { margin-top: var(--space-1); }
+.exp-hl li::marker { color: var(--forest); }
 
 /* Skills */
 .tags { display: flex; flex-wrap: wrap; gap: var(--space-2); }
