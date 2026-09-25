@@ -1,4 +1,4 @@
-# mdevecchi.github.io
+# m-devecchi.github.io
 
 Personal CV website of Marco De Vecchi, published with GitHub Pages.
 
