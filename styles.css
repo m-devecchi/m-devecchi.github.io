@@ -27,6 +27,8 @@
   --space-6: 24px;
   --space-8: 32px;
   --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
 
   /* Radius */
   --radius-sm: 4px;
@@ -35,6 +37,10 @@
 
   --measure: 66ch;
   --page: 1040px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -69,7 +75,13 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+/* Anchors land below the sticky top bar */
+[id] { scroll-margin-top: 80px; }
+
+::selection { background: var(--forest-soft); color: var(--ink); }
 
 body {
   margin: 0;
@@ -90,8 +102,8 @@ a:focus-visible, button:focus-visible {
   border-radius: var(--radius-sm);
 }
 
-h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.01em; }
-p { margin: 0; }
+h1, h2, h3 { margin: 0; font-weight: 600; letter-spacing: -0.01em; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
 ul { margin: 0; padding: 0; list-style: none; }
 
 .skip-link {
@@ -135,8 +147,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   color: var(--ink-muted); letter-spacing: 0;
 }
 .nav { display: none; gap: var(--space-6); }
-.nav a { color: var(--ink-muted); text-decoration: none; font-size: 14px; line-height: 20px; }
-.nav a:hover { color: var(--forest); text-decoration: underline; }
+.nav a {
+  position: relative;
+  color: var(--ink-muted); text-decoration: none; font-size: 14px; line-height: 20px;
+  transition: color 160ms ease;
+}
+.nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 1px;
+  background: var(--forest);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 200ms var(--ease-out);
+}
+.nav a[aria-current] { color: var(--ink); }
+.nav a[aria-current]::after { transform: scaleX(1); }
+@media (hover: hover) and (pointer: fine) {
+  .nav a:hover { color: var(--forest); }
+  .nav a:hover::after { transform: scaleX(1); }
+}
 @media (min-width: 720px) { .nav { display: flex; } }
 
 /* Buttons, as the design system's Website section describes them */
@@ -146,21 +173,37 @@ ul { margin: 0; padding: 0; list-style: none; }
   font: inherit; font-size: 14px; line-height: 20px; font-weight: 500;
   border-radius: var(--radius-sm);
   text-decoration: none; cursor: pointer; white-space: nowrap;
+  transition: transform 160ms var(--ease-out), filter 160ms ease, border-color 160ms ease;
 }
+.btn:active { transform: scale(0.97); }
 .btn-primary { background: var(--forest); color: var(--on-forest); border: 1px solid var(--forest); }
 .btn-primary:hover { filter: brightness(1.1); }
 .btn-secondary { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .btn-secondary:hover { border-color: var(--ink-muted); }
 .btn svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: square; }
+.btn-arrow { transition: transform 200ms var(--ease-out); }
+@media (hover: hover) and (pointer: fine) {
+  .btn:hover .btn-arrow { transform: translateY(1.5px); }
+}
 
 /* ---------- Hero ---------- */
 
-.hero { padding: var(--space-12) 0; border-bottom: 1px solid var(--line); }
+.hero { position: relative; padding: var(--space-12) 0; border-bottom: 1px solid var(--line); }
+/* Drafting-paper dots, fading out towards the text */
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(var(--line) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  -webkit-mask-image: linear-gradient(to left, #000, transparent 65%);
+  mask-image: linear-gradient(to left, #000, transparent 65%);
+}
 .hero .wrap {
+  position: relative;
   display: grid; gap: var(--space-8);
   align-items: end;
 }
 @media (min-width: 880px) {
+  .hero { padding: var(--space-20) 0 var(--space-16); }
   .hero .wrap { grid-template-columns: minmax(0, 1fr) 360px; }
 }
 
@@ -168,6 +211,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   font-size: 40px; line-height: 44px; letter-spacing: -0.02em;
 }
 @media (min-width: 720px) { .hero-name { font-size: 48px; line-height: 52px; } }
+@media (min-width: 880px) { .hero-name { font-size: 56px; line-height: 60px; letter-spacing: -0.03em; } }
 
 .hero-role {
   margin-top: var(--space-2);
@@ -290,6 +334,83 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer a { color: inherit; }
 .footer a:hover { color: var(--forest); }
 
+/* ---------- Motion ----------
+   Screen only, so print always gets the full page. Opacity carries every entrance;
+   movement is added on top only when the reader hasn't asked for less of it. */
+
+@keyframes enter { from { opacity: 0; transform: translate(var(--dx, 0px), var(--dy, 0px)); } }
+@keyframes draw { from { stroke-dashoffset: 1; } }
+@keyframes ping { to { transform: scale(2.8); opacity: 0; } }
+@keyframes progress { to { transform: scaleX(1); } }
+
+@media screen {
+  /* Hero: the copy rises in line by line while the cover art assembles */
+  .hero-name, .hero-role, .hero-tagline, .hero-summary, .hero-actions {
+    animation: enter 600ms var(--ease-out) both;
+  }
+  .hero-role { animation-delay: 60ms; }
+  .hero-tagline { animation-delay: 120ms; }
+  .hero-summary { animation-delay: 180ms; }
+  .hero-summary + .hero-summary { animation-delay: 240ms; }
+  .hero-actions { animation-delay: 300ms; }
+
+  .hero-art rect { animation: enter 700ms var(--ease-out) both; }
+  .hero-art .brand { animation-delay: 150ms; }
+  .hero-art .tint { animation-delay: 250ms; }
+  .hero-art .deep { animation-delay: 330ms; }
+  .hero-art .accent { animation-delay: 430ms; }
+
+  /* Scroll reveals, switched on by the script at the end of the page */
+  .js [data-reveal],
+  .js [data-reveal-children] > * {
+    opacity: 0;
+    transition: opacity 500ms var(--ease-out), transform 600ms var(--ease-out);
+  }
+  .js [data-reveal-children] > * { transition-delay: calc(var(--i, 0) * 30ms); }
+  .js [data-reveal][data-visible],
+  .js [data-reveal-children][data-visible] > * { opacity: 1; }
+
+  /* Current role: a live marker next to "present" */
+  .exp-current .exp-period { position: relative; padding-left: 14px; }
+  .exp-current .exp-period::before,
+  .exp-current .exp-period::after {
+    content: ""; position: absolute; left: 0; top: 7px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--forest);
+  }
+  .exp-current .exp-period::after { opacity: 0; }
+
+  /* Reading progress along the bottom edge of the top bar */
+  @supports (animation-timeline: scroll()) {
+    .topbar::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+      background: var(--forest);
+      transform: scaleX(0); transform-origin: left;
+      animation: progress linear both;
+      animation-timeline: scroll(root);
+    }
+  }
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  .hero-name, .hero-role, .hero-tagline, .hero-summary, .hero-actions { --dy: 12px; }
+  .hero-art .brand { --dy: 24px; }
+  .hero-art .tint { --dy: -16px; }
+  .hero-art .deep { --dx: 24px; }
+  .hero-art .accent { --dx: -12px; }
+
+  .hero-art .cut { stroke-dasharray: 1; animation: draw 700ms var(--ease-in-out) both; }
+  .hero-art .cut:nth-of-type(1) { animation-delay: 700ms; }
+  .hero-art .cut:nth-of-type(2) { animation-delay: 780ms; }
+  .hero-art .cut:nth-of-type(3) { animation-delay: 860ms; }
+
+  .js [data-reveal] { transform: translateY(12px); }
+  .js [data-reveal-children] > * { transform: scale(0.96); }
+  .js [data-reveal][data-visible],
+  .js [data-reveal-children][data-visible] > * { transform: none; }
+
+  .exp-current .exp-period::after { opacity: 0.5; animation: ping 2.4s var(--ease-out) infinite; }
+}
+
 /* ---------- Print: the page becomes the CV ---------- */
 
 @media print {
@@ -302,6 +423,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .topbar, .hero-actions, .hero-art, .footer, .skip-link { display: none !important; }
   .wrap { max-width: none; padding: 0; }
   .hero { padding: 0 0 var(--space-4); }
+  .hero::before { display: none; }
   .hero-name { font-size: 24pt; line-height: 1.1; }
   .hero-tagline { font-size: 14pt; line-height: 1.3; }
   .metrics { padding: var(--space-4) 0; }
