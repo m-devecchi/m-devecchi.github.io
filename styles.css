@@ -168,6 +168,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .nav a:hover::after { transform: scaleX(1); }
 }
 @media (min-width: 720px) { .nav { display: flex; } }
+/* Narrow phones: the name alone, so the download button always fits */
+@media (max-width: 399.98px) { .wordmark small { display: none; } }
 
 /* Buttons, as the design system's Website section describes them */
 .btn {
@@ -292,6 +294,29 @@ ul { margin: 0; padding: 0; list-style: none; }
   .hero-actions { margin-top: 0; }
 }
 
+/* Phones get their own composition rather than the desktop one squeezed: label, diagram,
+   then the name stacked on two lines and set to the full width */
+@media screen and (max-width: 879.98px) {
+  .hero { padding: var(--space-8) 0 var(--space-12); }
+  .hero .wrap { gap: var(--space-6); }
+  .hero-grid {
+    -webkit-mask-image: linear-gradient(to bottom, #000 30%, transparent 75%);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 75%);
+  }
+  .hero-lede { display: contents; }
+  .hero-role { order: 1; }
+  .hero-art { display: block; order: 2; max-width: 440px; }
+  .hero-art text { font-size: 13px; }
+  .hero-name {
+    order: 3; margin-top: var(--space-4);
+    font-size: min(calc((100vw - 2 * var(--gutter)) / 4.6), 150px); white-space: normal;
+  }
+  .hero-name .word:first-child { display: block; width: max-content; }
+  .hero-tagline { order: 4; margin-top: 0; font-size: clamp(24px, 7vw, 40px); max-width: 20ch; }
+  .hero-body { order: 5; }
+  .hero-actions .btn { flex: 1 1 100%; justify-content: center; padding: 14px var(--space-4); font-size: 16px; }
+}
+
 /* ---------- Metrics ---------- */
 
 .metrics { padding: var(--space-8) 0; border-bottom: 1px solid var(--line); }
@@ -325,6 +350,10 @@ ul { margin: 0; padding: 0; list-style: none; }
     font-family: var(--font-mono); font-size: 12px; line-height: 18px; font-weight: 400;
     letter-spacing: 0.04em; text-transform: uppercase; max-width: 24ch;
   }
+}
+@media screen and (max-width: 719.98px) {
+  .metrics .wrap { grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-4); }
+  .metric-value { font-size: 24vw; }
 }
 
 /* ---------- Sections ---------- */
@@ -378,6 +407,10 @@ ul { margin: 0; padding: 0; list-style: none; }
     font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase;
   }
   .row { grid-template-columns: 88px minmax(0, 1fr); }
+}
+@media screen and (max-width: 879.98px) {
+  .section-heading { font-size: clamp(40px, 12vw, 56px); }
+  .section-body { padding-top: var(--space-2); }
 }
 @media screen and (min-width: 880px) {
   .section { padding-top: var(--space-20); }
@@ -465,7 +498,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .cta-mail {
     display: inline-flex; align-items: center; gap: 0.4em;
-    font-size: clamp(18px, 3vw, 36px); line-height: 1.2; font-weight: 500;
+    font-size: clamp(18px, 5.6vw, 36px); line-height: 1.2; font-weight: 500;
     color: inherit; text-underline-offset: 0.2em;
   }
   .cta-meta {
@@ -474,6 +507,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .cta a:focus-visible { outline-color: currentColor; }
   .cta ::selection { background: var(--on-brand); color: var(--brand); }
+  @media (max-width: 719.98px) {
+    .cta { padding: var(--space-16) 0 var(--space-20); }
+    .cta-heading { margin-bottom: var(--space-4); }
+  }
   .footer { border-top: 0; }
 }
 @media (hover: hover) and (pointer: fine) {
@@ -615,6 +652,11 @@ ul { margin: 0; padding: 0; list-style: none; }
   .js [data-reveal-children] > * { transform: translateY(16px) scale(0.85); }
   .js [data-reveal][data-visible],
   .js [data-reveal-children][data-visible] > * { transform: none; }
+
+  @media (max-width: 719.98px) {
+    .js [data-reveal], .js [data-reveal-children] > * { transition-duration: 450ms, 600ms; }
+    .js [data-reveal]:not([data-visible]) { transform: translateY(20px); }
+  }
 
   /* Headings and figures rise out of a mask instead of fading */
   .js .section-heading[data-reveal], .js .cta-heading[data-reveal], .js .metric[data-reveal] { opacity: 1; transform: none; }
