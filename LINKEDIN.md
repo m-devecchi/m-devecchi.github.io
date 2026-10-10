@@ -19,7 +19,7 @@ E-commerce architect for international brands | Salesforce B2C Commerce Architec
 
 **B.**
 ```
-I design e-commerce platforms and wire them to ERP, PIM and OMS | Salesforce B2C Commerce Architect | 18 years in software, 5 brand launches
+I design e-commerce architecture and integrations for international brands | Salesforce B2C Commerce Architect | 18 years in software, 5 brand launches
 ```
 
 **C.**
@@ -39,13 +39,13 @@ B2C E-commerce & Technology Manager | Architecture, roadmap and delivery for int
 Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **80.9 PASS**.
 
 ```
-Your brand sells in several countries, and the e-commerce has to talk to ERP, PIM, OMS, payments and logistics without falling over. That's my job. I design that platform and get it live.
+Your brand sells in several countries, and the e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, and get them live.
 
 I'm a Senior Tech Architect at Deloitte Digital, Salesforce B2C Commerce Architect certified. I've spent 18 years in software, the last six as a technical architect on commerce platforms.
 
 What I own on a programme:
-- the architecture, from storefront to commerce core to the back-end systems behind it
-- the integrations, where most projects actually break
+- the architecture of the commerce platform
+- the integrations with the systems around it, where most projects actually break
 - delivery governance: estimates, technical risk, release management across instances
 - the technical leads, who I review and mentor
 
