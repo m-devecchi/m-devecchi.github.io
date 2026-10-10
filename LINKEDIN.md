@@ -113,7 +113,7 @@ Le prime 3 sono quelle per cui vuoi essere trovato (fissale in cima e chiedi end
 2. E-commerce Architecture
 3. Systems Integration
 
-Poi: Composable & Headless Architecture · SFRA · API Orchestration · Headless CMS · ERP / PIM / OMS Integration · CI/CD · Delivery Governance · Stakeholder Management · Technical Leadership · Mentoring
+Poi: Composable & Headless Architecture · SFRA · API Orchestration · Headless CMS · Integration with back-end systems (ERP, PIM, OMS) · CI/CD · Delivery Governance · Stakeholder Management · Technical Leadership · Mentoring
 
 ---
 
