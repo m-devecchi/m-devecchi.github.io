@@ -145,7 +145,7 @@ E-commerce architecture for international brands
 m-devecchi.github.io
 ```
 
-Stile coerente col sito: lo schema storefront → CMS → commerce core → ERP · PIM · OMS dell'hero funziona benissimo come grafica.
+Stile coerente col sito: lo schema storefront → CMS → commerce core dell'hero funziona benissimo come grafica.
 
 ---
 
