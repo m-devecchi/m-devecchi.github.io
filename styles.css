@@ -391,7 +391,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .section-heading, .section-body { border-top: 0; }
   .section-heading::before {
-    content: counter(section, decimal-leading-zero) " / 05";
+    content: counter(section, decimal-leading-zero) " / 06";
     display: block; margin-bottom: var(--space-2);
     font-family: var(--font-mono); font-weight: 500;
     font-size: 12px; line-height: 16px; letter-spacing: 0.08em;
@@ -446,6 +446,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .tag-core { background: var(--brand-soft); border-color: var(--brand-soft); }
 .tags + .subhead { margin-top: var(--space-6); }
+.ai-lede { margin-bottom: var(--space-4); }
 .subhead { font-size: 14px; line-height: 20px; font-weight: 600; margin-bottom: var(--space-2); }
 
 /* Simple definition rows: education, languages, certifications */
@@ -719,4 +720,52 @@ ul { margin: 0; padding: 0; list-style: none; }
   .section { padding-top: var(--space-4); }
   .exp { padding: var(--space-2) 0; }
   .cta { display: none; }
+
+  /* One page: older roles keep title and dates only, the personal section stays on the site */
+  body { font-size: 9.5pt; line-height: 1.32; }
+  @page { margin: 12mm 14mm; }
+  .hero { padding-bottom: var(--space-2); }
+  .hero-summary + .hero-summary { margin-top: var(--space-2); }
+  .metrics { padding: var(--space-2) 0; }
+  .metric-value { font-size: 15pt; }
+  .section { padding-top: var(--space-3, 12px); }
+  .section-heading { padding-top: var(--space-1); }
+  .exp { padding: var(--space-1) 0; }
+  .exp-hl { font-size: 9pt; line-height: 1.3; margin-top: 2px; }
+  .exp-hl li { margin-top: 1px; }
+  .exp-summary { font-size: 9pt; }
+  .exp-older .exp-hl, #interests { display: none; }
+  .ai-lede { margin-bottom: var(--space-1); }
+  .tags { gap: 4px; }
+  .tag { font-size: 8pt; padding: 1px 6px; }
+  .tags + .subhead { margin-top: var(--space-2); }
+  .subhead { font-size: 9pt; margin-bottom: 2px; }
+  .cert-list { display: flex; gap: var(--space-4); }
+  .rows { display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
+  .row { padding: 0; border: 0; }
+  .print-skip, .hero-summary + .hero-summary { display: none; }
+  .hero-lede { margin-bottom: var(--space-1); }
+  /* Short sections: heading on the left, content inline */
+  #skills .wrap, #education .wrap, #languages .wrap { grid-template-columns: 96px minmax(0, 1fr); gap: var(--space-3, 12px); }
+  .tags { display: block; }
+  .tag { display: inline; padding: 0; border: 0; background: none; font-size: inherit; }
+  .tag:not(:last-child)::after { content: " · "; color: var(--ink-muted); }
+  .tag-core { font-weight: 500; }
+  .row-sub { display: inline; }
+  .row-sub::before { content: " · "; }
+  .rows .row > div > p { display: inline; }
+  .hero-body { margin-top: var(--space-2); }
+  .exp-head > div { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 var(--space-2); }
+  .exp-role { font-size: 11pt; line-height: 1.3; }
+  .exp-org { font-size: 9pt; margin-top: 0; }
+  .exp-org::before { content: "· "; }
+  .exp-period { font-size: 9pt; }
+  .exp-summary { margin-top: 2px; }
+  .metric-label br { display: none; }
+  .cert-list { margin: 0; }
+  .cert-list li + li { margin-top: 0; }
+  .hero-lede { margin-bottom: 0; }
+  .hero-body, .hero-copy { margin-top: 4px; padding-top: 0; }
+  .tags + .subhead { margin-top: 4px; }
+  .hero .wrap { gap: var(--space-2); }
 }

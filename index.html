@@ -48,6 +48,7 @@
       <a class="wordmark" href="#top">Marco De Vecchi<small>Senior Tech Architect</small></a>
       <nav class="nav" aria-label="Sections">
         <a href="#experience">Experience</a>
+        <a href="#ai">AI</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -114,7 +115,7 @@
             </p>
             <p class="hero-summary">
               18 years in software, the last six as a technical architect on Salesforce B2C Commerce.
-              5 international brands launched so far. Before commerce I built insurance and pension
+              5 international brands launched so far, and AI agents are now part of how I deliver. Before commerce I built insurance and pension
               portals, where a bug quickly becomes a compliance problem. The habit stayed.
             </p>
           </div>
@@ -194,7 +195,7 @@
               <li>Introduced CI/CD pipelines and automated quality gates across the delivery teams.</li>
             </ul>
           </article>
-          <article data-reveal class="exp">
+          <article data-reveal class="exp exp-older">
             <div class="exp-head">
               <div>
                 <h3 class="exp-role">Full-Stack Developer</h3>
@@ -206,7 +207,7 @@
               <li>Built and maintained web platforms for insurance and pension providers: customer and policy portals, back-office tools and integrations with core systems, in a regulated, high-reliability context.</li>
             </ul>
           </article>
-          <article data-reveal class="exp">
+          <article data-reveal class="exp exp-older">
             <div class="exp-head">
               <div>
                 <h3 class="exp-role">Full-Stack Developer &amp; System Administrator</h3>
@@ -222,6 +223,21 @@
       </div>
     </section>
 
+    <section class="section" id="ai" aria-labelledby="ai-heading">
+      <div class="wrap">
+        <h2 data-reveal class="section-heading" id="ai-heading"><span>AI in delivery</span></h2>
+        <div class="section-body">
+          <p data-reveal class="ai-lede print-skip">I use AI agents every day in commerce delivery, and I design how they fit into the team's flow: from user story to pull request, with people still owning review and merge.</p>
+          <ul data-reveal class="exp-hl">
+            <li>Designed an AI-assisted development flow for Salesforce B2C Commerce / SFRA repositories: shared repository instructions (AGENTS.md), specialised agents, reusable skills and MCP servers for authorised tools.</li>
+            <li>Specialised agents for unit tests (Mocha, Proxyquire, mocked dw.* APIs), read-only log analysis, Figma-to-component work and pull request review support.</li>
+            <li>Built Realm Doctor, a read-only audit kit for B2C Commerce realms that runs in Claude Code on Salesforce's B2C DX MCP server: quota, error signatures, cartridge code rules, promotions.</li>
+            <li class="print-skip">Daily tools: Claude Code, GitHub Copilot, agent skills, Model Context Protocol (MCP).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="skills" aria-labelledby="skills-heading">
       <div class="wrap">
         <h2 data-reveal class="section-heading" id="skills-heading"><span>Skills</span></h2>
@@ -232,6 +248,7 @@
             <li class="tag tag-core">SFRA</li>
             <li class="tag tag-core">Integration of complex platforms</li>
             <li class="tag tag-core">API orchestration</li>
+            <li class="tag tag-core">AI-assisted development (Claude Code, MCP)</li>
             <li class="tag">Headless CMS</li>
             <li class="tag">Integration with back-end systems (ERP, PIM, OMS)</li>
             <li class="tag">CI / CD</li>
