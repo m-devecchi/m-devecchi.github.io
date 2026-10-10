@@ -36,22 +36,22 @@ B2C E-commerce & Technology Manager | Architecture, roadmap and delivery for int
 
 ## 2. About / Informazioni
 
-Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **80.9 PASS**.
+Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **90.3 PASS** (il tuo About attuale: 30.5 FLAGGED). 1.156 caratteri su 2.600.
 
 ```
-Your brand sells in several countries, and the e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, and get them live.
+Your brand sells in several countries, and the e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, then get them live.
 
-I'm a Senior Tech Architect at Deloitte Digital, Salesforce B2C Commerce Architect certified. I've spent 18 years in software, the last six as a technical architect on commerce platforms.
+I'm a Senior Tech Architect at Deloitte Digital, certified Salesforce B2C Commerce Architect and Developer. 18 years in software. The last six I've spent as a technical architect on commerce platforms, mostly multi-brand and multi-country, where one shared core has to serve teams that don't sit in the same office.
 
 What I own on a programme:
 - the architecture of the commerce platform
 - the integrations with the systems around it, where most projects actually break
-- delivery governance: estimates, technical risk, release management across instances
+- delivery governance: estimates, technical risk, releases across instances
 - the technical leads, who I review and mentor
 
-5 international brands launched as architect so far, across EMEA and the US. Before commerce I spent years building portals for insurance and pension providers, where a bug in a policy portal quickly becomes a compliance problem for the whole company. The habit stayed.
+5 international brands launched so far, in EMEA and US markets. Before commerce I built insurance and pension portals at Previnet, where a bug quickly becomes a compliance problem. The habit stayed.
 
-If you're planning a replatform, a multi-country rollout or an integration that keeps slipping, send me a message. Happy to talk architecture before there's a project, too.
+Planning a replatform, a multi-country rollout or an integration that keeps slipping? Send me a message. Happy to talk architecture before there's a project, too.
 ```
 
 ---
@@ -186,7 +186,7 @@ Questi punti della rubrica dipendono da te, non dalla copy:
 | attività | 0-2/10 | la sezione Activity sembra vuota |
 | **parziale** | **11-13 / 48** | featured, banner, foto, esperienze, skill e raccomandazioni non erano nel testo incollato |
 
-`detect.py` sull'About attuale: **30.5 FLAGGED** (frasi tutte della stessa lunghezza, 1 solo dato concreto, zero contrazioni). Sul nuovo About: **80.9 PASS** (+50.4).
+`detect.py` sull'About attuale: **30.5 FLAGGED** (frasi tutte della stessa lunghezza, 1 solo dato concreto, zero contrazioni). Sul nuovo About: **90.3 PASS** (+59.8).
 
 ### Dopo: con questa copy
 
