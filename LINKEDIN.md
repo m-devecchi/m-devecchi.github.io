@@ -27,6 +27,11 @@ I design e-commerce platforms and wire them to ERP, PIM and OMS | Salesforce B2C
 Senior Tech Architect @ Deloitte Digital | Multi-country e-commerce on Salesforce Commerce Cloud, from architecture to go-live | 2x Salesforce certified
 ```
 
+**D. (se vuoi restare sul posizionamento da manager, come ora)**
+```
+B2C E-commerce & Technology Manager | Architecture, roadmap and delivery for international brands | Salesforce B2C Commerce Architect | 5 launches across EMEA & US
+```
+
 ---
 
 ## 2. About / Informazioni
@@ -170,6 +175,27 @@ Questi punti della rubrica dipendono da te, non dalla copy:
 
 ## Punteggio
 
-Non ho potuto leggere il profilo attuale (LinkedIn richiede il login, e le skill non accedono per conto tuo), quindi niente punteggio "prima". Incollami headline, about ed esperienze attuali e faccio lo score `/li-profile` prima/dopo.
+### Prima: profilo attuale (solo le parti visibili da fuori)
 
-Con questa copy applicata la stima è circa **60-65/100** dalla sola parte testuale (headline, about, esperienze, skill, featured, contatti). I restanti ~40 punti sono foto, banner, raccomandazioni e attività: vedi sezione 9.
+| voce | punti | perché |
+| --- | --- | --- |
+| headline | 4/12 | ruolo + "Ownership of...", nessun pubblico, nessuna prova; usa 95 caratteri su 220 |
+| about, prime 2 righe | 3/10 | apre col titolo in stile bio, non dice a chi parli né che problema risolvi |
+| about, corpo | 2/10 | elenco di responsabilità, zero numeri, nessun invito al contatto, "results-driven" |
+| contatti | 2/6 | URL personalizzato sì; sito ed email da aggiungere |
+| attività | 0-2/10 | la sezione Activity sembra vuota |
+| **parziale** | **11-13 / 48** | featured, banner, foto, esperienze, skill e raccomandazioni non erano nel testo incollato |
+
+`detect.py` sull'About attuale: **30.5 FLAGGED** (frasi tutte della stessa lunghezza, 1 solo dato concreto, zero contrazioni). Sul nuovo About: **80.9 PASS** (+50.4).
+
+### Dopo: con questa copy
+
+| voce | prima | dopo |
+| --- | --- | --- |
+| headline | 4 | 11 |
+| about, prime 2 righe | 3 | 9 |
+| about, corpo | 2 | 9 |
+| contatti | 2 | 5 |
+| **totale su queste voci** | **11/38** | **34/38** |
+
+Il resto (foto, banner, featured, esperienze, skill, raccomandazioni, attività) lo posso valutare se mi incolli la sezione Esperienza o mi mandi uno screenshot della parte alta del profilo. Attività e raccomandazioni nessun testo le può creare: vedi sezione 9.
