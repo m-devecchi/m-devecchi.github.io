@@ -163,7 +163,7 @@ Stile coerente col sito: lo schema storefront → CMS → commerce core dell'her
 - **Info di contatto**: sito `m-devecchi.github.io`, email `marco.devecchi84@gmail.com`
 - **Località**: Treviso, Veneto, Italy
 - **Formazione**: Università degli Studi di Padova, Bachelor's degree, Computer Science, 2008
-- **Lingue**: Italian (Native), English (Professional working proficiency, B2)
+- **Lingue**: Italian (Native), English (Professional working proficiency)
 - **Open to**: niente "Providing services" (sei dipendente Deloitte); "Open to work" solo se cerchi, visibile solo ai recruiter
 
 ---
