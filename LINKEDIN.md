@@ -36,10 +36,10 @@ B2C E-commerce & Technology Manager | Architecture, roadmap and delivery for int
 
 ## 2. About / Informazioni
 
-Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **90.3 PASS** (il tuo About attuale: 30.5 FLAGGED). 1.156 caratteri su 2.600.
+Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **91.0 PASS** (il tuo About attuale: 30.5 FLAGGED). Circa 1.100 caratteri su 2.600.
 
 ```
-Your brand sells in several countries, and the e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, then get them live.
+When a brand sells in several countries, its e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, then get them live.
 
 I'm a Senior Tech Architect at Deloitte Digital, certified Salesforce B2C Commerce Architect and Developer. 18 years in software. The last six I've spent as a technical architect on commerce platforms, mostly multi-brand and multi-country, where one shared core has to serve teams that don't sit in the same office.
 
@@ -51,7 +51,7 @@ What I own on a programme:
 
 5 international brands launched so far, in EMEA and US markets. Before commerce I built insurance and pension portals at Previnet, where a bug quickly becomes a compliance problem. The habit stayed.
 
-Planning a replatform, a multi-country rollout or an integration that keeps slipping? Send me a message. Happy to talk architecture before there's a project, too.
+Working on commerce platforms too? I'm always happy to compare notes on architecture and integration.
 ```
 
 ---
@@ -156,7 +156,7 @@ Stile coerente col sito: lo schema storefront → CMS → commerce core dell'her
 - **Località**: Treviso, Veneto, Italy
 - **Formazione**: Università degli Studi di Padova, Bachelor's degree, Computer Science, 2008
 - **Lingue**: Italian (Native), English (Professional working proficiency, B2)
-- **Open to**: imposta "Providing services" o "Open to work" (solo recruiter) a seconda dell'obiettivo
+- **Open to**: niente "Providing services" (sei dipendente Deloitte); "Open to work" solo se cerchi, visibile solo ai recruiter
 
 ---
 
