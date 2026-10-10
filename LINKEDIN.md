@@ -32,11 +32,16 @@ Senior Tech Architect @ Deloitte Digital | Multi-country e-commerce on Salesforc
 B2C E-commerce & Technology Manager | Architecture, roadmap and delivery for international brands | Salesforce B2C Commerce Architect | 5 launches across EMEA & US
 ```
 
+**E. (se vuoi mettere in evidenza l'AI)**
+```
+E-commerce architect for international brands | Salesforce B2C Commerce Architect | AI-assisted delivery with agents and MCP | Deloitte Digital
+```
+
 ---
 
 ## 2. About / Informazioni
 
-Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **91.0 PASS** (il tuo About attuale: 30.5 FLAGGED). Circa 1.100 caratteri su 2.600.
+Le prime due righe sono le uniche visibili su mobile prima di "vedi altro": dicono a chi parli e cosa risolvi. Human score `detect.py`: **86.2 PASS** (il tuo About attuale: 30.5 FLAGGED). Circa 1.360 caratteri su 2.600.
 
 ```
 When a brand sells in several countries, its e-commerce platform has to fit with every system already around it. That's my job. I design the architecture and the integrations, then get them live.
@@ -48,6 +53,8 @@ What I own on a programme:
 - the integrations with the systems around it, where most projects actually break
 - delivery governance: estimates, technical risk, releases across instances
 - the technical leads, who I review and mentor
+
+AI agents are part of how I deliver. I designed an AI-assisted development flow for our B2C Commerce repositories, from user story to pull request: shared instructions, specialised agents, reusable skills and MCP servers. People still own the review and the merge.
 
 5 international brands launched so far, in EMEA and US markets. Before commerce I built insurance and pension portals at Previnet, where a bug quickly becomes a compliance problem. The habit stayed.
 
@@ -68,6 +75,7 @@ Lead architect for B2C e-commerce programmes of international brands, from archi
 - Designed the Salesforce B2C Commerce architecture for an international consumer brand's direct-to-consumer platform across EMEA and US markets, integrated with ERP and CRM.
 - Led technical delivery of a new e-commerce platform for a leading European online retailer: large multi-brand catalogue, high-volume order flows, distributed team.
 - Defined a multi-brand, multi-country platform for a global manufacturer's European markets: one shared core, releases governed across instances.
+- Designed an AI-assisted development flow for SFRA repositories: shared repository instructions (AGENTS.md), specialised agents for unit tests, log analysis and pull request review, reusable skills and MCP servers. People keep review and merge.
 - Run architecture reviews, estimates and technical risk across programmes; mentor the technical leads.
 ```
 
@@ -113,7 +121,7 @@ Le prime 3 sono quelle per cui vuoi essere trovato (fissale in cima e chiedi end
 2. E-commerce Architecture
 3. Systems Integration
 
-Poi: Composable & Headless Architecture · SFRA · API Orchestration · Headless CMS · Integration with back-end systems (ERP, PIM, OMS) · CI/CD · Delivery Governance · Stakeholder Management · Technical Leadership · Mentoring
+Poi: Composable & Headless Architecture · SFRA · API Orchestration · Headless CMS · Integration with back-end systems (ERP, PIM, OMS) · CI/CD · Delivery Governance · Stakeholder Management · Technical Leadership · Mentoring · AI-assisted development (Claude Code, GitHub Copilot, MCP)
 
 ---
 
