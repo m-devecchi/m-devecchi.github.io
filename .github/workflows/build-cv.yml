@@ -1,0 +1,29 @@
+name: Build CV PDF
+
+# Regenerates Marco_De_Vecchi_CV.pdf from the site whenever its content or styles change
+on:
+  push:
+    branches: [main]
+    paths: [index.html, styles.css, fonts/**, scripts/build-cv.mjs]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-save playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/build-cv.mjs
+      - name: Commit the PDF if it changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
+          git add Marco_De_Vecchi_CV.pdf
+          git diff --cached --quiet || (git commit -m "Rebuild CV PDF from the site" && git push)

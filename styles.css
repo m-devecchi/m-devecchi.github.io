@@ -477,6 +477,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .cta-meta { font-size: 14px; line-height: 20px; color: var(--ink-muted); }
 .cta-meta a { color: inherit; text-underline-offset: 0.2em; }
 .cta-lede { max-width: var(--measure); margin-bottom: var(--space-4); }
+.print-contacts { display: none; }
 @media screen {
   .cta {
     margin-top: var(--space-20); padding: var(--space-20) 0;
@@ -699,4 +700,23 @@ ul { margin: 0; padding: 0; list-style: none; }
   .section-body { border-top: 0; padding-top: 0; }
   .exp, .row, .cert-list li { break-inside: avoid; }
   a { color: inherit; text-decoration: none; }
+
+  /* The CV: two A4 pages, contacts in the header instead of the closing band */
+  body { font-size: 10pt; line-height: 1.38; }
+  .hero .wrap { position: relative; }
+  .hero-name { font-size: 22pt; }
+  .hero-tagline { max-width: none; font-size: 12pt; }
+  .hero-summary, .section-body { max-width: none; }
+  .print-contacts {
+    display: block; position: absolute; top: 0; right: 0;
+    margin: 0; padding: 0; list-style: none; text-align: right;
+    font-size: 9pt; line-height: 1.5; color: var(--ink-muted);
+  }
+  .metrics { padding: var(--space-3, 12px) 0; }
+  .metrics .wrap { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); }
+  .metric-value { font-size: 18pt; line-height: 1.1; }
+  .metric-label { font-size: 8pt; line-height: 1.3; }
+  .section { padding-top: var(--space-4); }
+  .exp { padding: var(--space-2) 0; }
+  .cta { display: none; }
 }
