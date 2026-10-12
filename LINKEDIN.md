@@ -72,8 +72,8 @@ Deloitte Digital · Milan, Italy · Oct 2023 – present
 ```
 Lead architect for B2C e-commerce programmes of international brands, from architecture to go-live and run.
 
-- Designed the Salesforce B2C Commerce architecture for an Italian premium coffee brand's direct-to-consumer platform: one codebase serving EMEA and US markets, each with its own catalogue, pricing, tax and payment rules, integrated with ERP and CRM.
-- Led technical delivery of a new e-commerce platform for a leading French coffee e-retailer: large multi-brand catalogue of coffee, machines and accessories, high-volume order flows, distributed team.
+- Designed the Salesforce B2C Commerce architecture for an Italian premium consumer brand's direct-to-consumer platform: one codebase serving EMEA and US markets, each with its own catalogue, pricing, tax and payment rules, integrated with ERP and CRM.
+- Led technical delivery of a new e-commerce platform for a leading European specialist e-retailer: large multi-brand catalogue, high-volume order flows, distributed team.
 - Defined a multi-brand, multi-country platform for a global manufacturer's European markets: one shared core, releases governed across instances.
 - Designed an AI-assisted development flow for SFRA repositories: shared repository instructions (AGENTS.md), specialised agents for unit tests, log analysis and pull request review, reusable skills and MCP servers. People keep review and merge.
 - Run architecture reviews, estimates and technical risk across programmes; mentor the technical leads.
