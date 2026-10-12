@@ -72,8 +72,8 @@ Deloitte Digital · Milan, Italy · Oct 2023 – present
 ```
 Lead architect for B2C e-commerce programmes of international brands, from architecture to go-live and run.
 
-- Designed the Salesforce B2C Commerce architecture for an international consumer brand's direct-to-consumer platform across EMEA and US markets, integrated with ERP and CRM.
-- Led technical delivery of a new e-commerce platform for a leading European online retailer: large multi-brand catalogue, high-volume order flows, distributed team.
+- Designed the Salesforce B2C Commerce architecture for an Italian premium coffee brand's direct-to-consumer platform: one codebase serving EMEA and US markets, each with its own catalogue, pricing, tax and payment rules, integrated with ERP and CRM.
+- Led technical delivery of a new e-commerce platform for a leading French coffee e-retailer: large multi-brand catalogue of coffee, machines and accessories, high-volume order flows, distributed team.
 - Defined a multi-brand, multi-country platform for a global manufacturer's European markets: one shared core, releases governed across instances.
 - Designed an AI-assisted development flow for SFRA repositories: shared repository instructions (AGENTS.md), specialised agents for unit tests, log analysis and pull request review, reusable skills and MCP servers. People keep review and merge.
 - Run architecture reviews, estimates and technical risk across programmes; mentor the technical leads.
@@ -82,7 +82,7 @@ Lead architect for B2C e-commerce programmes of international brands, from archi
 ### Lead Technical Architect
 Alpenite s.r.l · Venice, Italy · Dec 2022 – Oct 2023
 ```
-Led the architecture team on Salesforce B2C Commerce projects for retail and consumer brands.
+Led the architecture team on Salesforce B2C Commerce projects for luxury fashion, retail and consumer brands.
 
 - Set the team standards for integrations, CI/CD and code quality.
 - Reference architect in pre-sales: solution design, effort estimation, technical due diligence.
@@ -91,7 +91,7 @@ Led the architecture team on Salesforce B2C Commerce projects for retail and con
 ### Technical Architect
 Alpenite s.r.l · Venice, Italy · Mar 2020 – Dec 2022
 ```
-Designed and delivered B2C commerce platforms on Salesforce Commerce Cloud.
+Designed and delivered Salesforce Commerce Cloud platforms for Italian luxury fashion and accessories brands selling internationally.
 
 - Multi-site storefronts integrated with ERP, PIM, OMS, payment and logistics services.
 - Introduced CI/CD pipelines and automated quality gates across the delivery teams.
