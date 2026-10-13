@@ -447,6 +447,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .tag-core { background: var(--brand-soft); border-color: var(--brand-soft); }
 .tags + .subhead { margin-top: var(--space-6); }
 .ai-lede { margin-bottom: var(--space-4); }
+.print-only { display: none; }
 .project + .project { margin-top: var(--space-6); }
 .project-desc { font-size: 14px; line-height: 20px; }
 .project .exp-org { margin-top: var(--space-1); }
@@ -749,6 +750,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .rows { display: flex; flex-wrap: wrap; gap: 0 var(--space-6); }
   .row { padding: 0; border: 0; }
   .print-skip, .metrics { display: none; }
+  .exp-hl .print-only { display: list-item; }
   .hero-lede { margin-bottom: var(--space-1); }
   /* Short sections: heading on the left, content inline */
   #skills .wrap, #education .wrap, #languages .wrap { grid-template-columns: 96px minmax(0, 1fr); gap: var(--space-3, 12px); }
