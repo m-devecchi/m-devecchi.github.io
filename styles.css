@@ -450,6 +450,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .project + .project { margin-top: var(--space-6); }
 .project-desc { font-size: 14px; line-height: 20px; }
 .project .exp-org { margin-top: var(--space-1); }
+.project-desc + .project-desc { margin-top: var(--space-2); }
+.project .subhead a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .subhead { font-size: 14px; line-height: 20px; font-weight: 600; margin-bottom: var(--space-2); }
 
 /* Simple definition rows: education, languages, certifications */
