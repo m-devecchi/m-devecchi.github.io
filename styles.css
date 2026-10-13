@@ -391,7 +391,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   }
   .section-heading, .section-body { border-top: 0; }
   .section-heading::before {
-    content: counter(section, decimal-leading-zero) " / 06";
+    content: counter(section, decimal-leading-zero) " / 07";
     display: block; margin-bottom: var(--space-2);
     font-family: var(--font-mono); font-weight: 500;
     font-size: 12px; line-height: 16px; letter-spacing: 0.08em;
@@ -447,6 +447,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .tag-core { background: var(--brand-soft); border-color: var(--brand-soft); }
 .tags + .subhead { margin-top: var(--space-6); }
 .ai-lede { margin-bottom: var(--space-4); }
+.project + .project { margin-top: var(--space-6); }
+.project-desc { font-size: 14px; line-height: 20px; }
+.project .exp-org { margin-top: var(--space-1); }
 .subhead { font-size: 14px; line-height: 20px; font-weight: 600; margin-bottom: var(--space-2); }
 
 /* Simple definition rows: education, languages, certifications */
