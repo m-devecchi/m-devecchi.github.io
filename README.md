@@ -9,4 +9,4 @@ Personal CV website of Marco De Vecchi, published at https://www.marcodevecchi.o
 
 No build step: the site is static files, deployed to AWS from `main` (production) and `develop` (test).
 
-The PDF is generated from the site itself: `index.html` rendered with its print stylesheet (`@media print` in `styles.css`) onto one A4 page by `scripts/build-cv.mjs`. The `Build CV PDF` GitHub Action runs it on every push to `main` that touches the site and commits the new `Marco_De_Vecchi_CV.pdf`, so the download always matches the page. To build it locally: `npm install --no-save playwright && npx playwright install chromium && node scripts/build-cv.mjs`.
+The PDF is generated from the site itself: `index.html` rendered with its print stylesheet (`@media print` in `styles.css`) onto one A4 page by `scripts/build-cv.mjs`. The `Build CV PDF` GitHub Action runs it on every push to `main` or `develop` that touches the site and commits the new `Marco_De_Vecchi_CV.pdf`, so the download always matches the page. To build it locally: `npm install --no-save playwright && npx playwright install chromium && node scripts/build-cv.mjs`.

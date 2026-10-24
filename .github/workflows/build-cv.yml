@@ -3,16 +3,16 @@ name: Build CV PDF
 # Regenerates Marco_De_Vecchi_CV.pdf from the site whenever its content or styles change
 on:
   push:
-    branches: [main]
+    branches: [main, develop]
     paths: [index.html, styles.css, fonts/**, scripts/build-cv.mjs]
   workflow_dispatch:
 
 permissions:
   contents: write
 
-# Pushes in quick succession: only the newest run builds, older ones are cancelled
+# Pushes in quick succession on a branch: only the newest run builds, older ones are cancelled
 concurrency:
-  group: build-cv
+  group: build-cv-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
@@ -31,15 +31,15 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898341+github-actions[bot]@users.noreply.github.com"
           cp Marco_De_Vecchi_CV.pdf "$RUNNER_TEMP/cv.pdf"
-          # Commit on top of the latest main, so a push that landed during the build does not reject ours
+          # Commit on top of the latest commit of the branch, so a push that landed during the build does not reject ours
           for attempt in 1 2 3; do
-            git fetch origin main
-            git reset --hard origin/main
+            git fetch origin "$GITHUB_REF_NAME"
+            git reset --hard "origin/$GITHUB_REF_NAME"
             cp "$RUNNER_TEMP/cv.pdf" Marco_De_Vecchi_CV.pdf
             git add Marco_De_Vecchi_CV.pdf
             git diff --cached --quiet && exit 0
             git commit -m "Rebuild CV PDF from the site"
-            git push origin HEAD:main && exit 0
+            git push origin "HEAD:$GITHUB_REF_NAME" && exit 0
             sleep 5
           done
           exit 1
