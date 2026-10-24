@@ -138,7 +138,7 @@ Poi: Composable & Headless Architecture · SFRA · API Orchestration · Headless
 
 Tre elementi, niente vuoto (8 punti in rubrica):
 
-1. **Link**: il sito CV, https://m-devecchi.github.io (titolo: "CV: Senior Tech Architect")
+1. **Link**: il sito CV, https://www.marcodevecchi.org (titolo: "CV: Senior Tech Architect")
 2. **Media**: `Marco_De_Vecchi_CV.pdf`
 3. **Post**: il tuo miglior post. Se non ne hai ancora uno, scrivilo con `/li-post` (spunti qui sotto) e mettilo qui.
 
@@ -150,7 +150,7 @@ Una frase di posizionamento e un modo per contattarti, non il gradiente blu di d
 
 ```
 E-commerce architecture for international brands
-m-devecchi.github.io
+www.marcodevecchi.org
 ```
 
 Stile coerente col sito: lo schema storefront → CMS → commerce core dell'hero funziona benissimo come grafica.
@@ -160,7 +160,7 @@ Stile coerente col sito: lo schema storefront → CMS → commerce core dell'her
 ## 8. Contatti e altre sezioni
 
 - **URL personalizzato**: già `linkedin.com/in/marcodevecchi` ✓
-- **Info di contatto**: sito `m-devecchi.github.io`, email `marco.devecchi84@gmail.com`
+- **Info di contatto**: sito `www.marcodevecchi.org`, email `marco.devecchi84@gmail.com`
 - **Località**: Treviso, Veneto, Italy
 - **Formazione**: Università degli Studi di Padova, Bachelor's degree, Computer Science, 2008
 - **Lingue**: Italian (Native), English (Professional working proficiency)
